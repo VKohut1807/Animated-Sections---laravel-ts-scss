@@ -1,0 +1,128 @@
+@use "@/scss/config/index.scss" as *;
+
+.section-12 {
+    background-color: #000;
+    position: relative;
+    overflow: hidden;
+
+    .content {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 4rem 0 3rem;
+        position: relative;
+        transition: padding 0.3s ease-in-out;
+
+        @include break('md') {
+            flex-direction: column;
+            padding: 4rem 0 0;
+        }
+
+        .background-image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            display: block;
+            opacity: 0.75;
+        }
+
+        .person-box {
+            width: 35%;
+            height: fit-content;
+            overflow: hidden;
+            border: 0.5rem solid #fff;
+            z-index: 1;
+            animation: fall-Y 10s infinite;
+            transition: width 0.3s ease-in-out;
+
+            @include break('md') {
+                width: 75%;
+                animation: fall-X 10s infinite;
+            }
+
+            .person_image {
+                width: 100%;
+                height: 100%;
+                display: block;
+                transition:
+                    object-position 0.3s ease-in-out,
+                    max-height 0.3s ease-in-out;
+
+                @include break('md') {
+                    object-position: center 25%;
+                    max-height: 25rem;
+                }
+            }
+        }
+
+        .info {
+            position: relative;
+            z-index: 1;
+            max-width: 50%;
+            height: fit-content;
+            color: #fff;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            padding: 2rem 1rem;
+            background-color: #000;
+            border: 0.5rem solid #fff;
+            transition:
+                max-width 0.3s ease-in-out,
+                text-align 0.3s ease-in-out,
+                border 0.3s ease-in-out,
+                padding 0.3s ease-in-out;
+
+            @include break('md') {
+                max-width: 100%;
+                border: none;
+                padding: 2rem 0 5rem;
+                text-align: justify;
+            }
+
+            h3 {
+                font-size: 3rem;
+                line-height: normal;
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 1.6rem;
+            }
+
+            .link-box {
+                font-size: 1rem;
+
+                .link {
+                    color: $fifth;
+                }
+            }
+        }
+    }
+
+    @keyframes fall-Y {
+
+        0%,
+        100% {
+            transform: translate(0%, -5%);
+        }
+
+        50% {
+            transform: translate(0%, 25%);
+        }
+    }
+
+    @keyframes fall-X {
+
+        0%,
+        100% {
+            transform: translate(3%, 0%);
+        }
+
+        50% {
+            transform: translate(30%, 0);
+        }
+    }
+}

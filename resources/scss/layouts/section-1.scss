@@ -1,0 +1,175 @@
+@use "@/scss/config/index.scss" as *;
+
+.section-1 {
+    margin: 4rem 0;
+
+    .section-up {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        margin-bottom: 4rem;
+        transition: gap 0.3s ease-in-out;
+
+        @include break('sm') {
+            display: flex;
+            flex-direction: column;
+            gap: 3rem;
+        }
+
+        h3 {
+            font-size: 2.5rem;
+        }
+
+        .right {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            gap: 0.5rem;
+            position: relative;
+            padding: 0 1.5rem;
+            transition: width 0.3s ease-in-out;
+
+            @include break('sm') {
+                width: fit-content;
+            }
+
+            &:hover {
+                &::after {
+                    width: 100%;
+                    opacity: 1;
+                }
+
+                .text {
+                    color: #fff;
+                }
+
+                svg {
+                    transform: translateX(5px);
+
+                    path {
+                        stroke: #fff;
+                    }
+                }
+            }
+
+            &::after {
+                content: "";
+                position: absolute;
+                top: -0.35rem;
+                left: -0.1rem;
+                width: 3.5rem;
+                height: 3.5rem;
+                background-color: $primary_60;
+                border-radius: 2rem;
+                z-index: -1;
+                opacity: 0.5;
+                transition:
+                    top 0.3s ease-in-out,
+                    opacity 0.3s ease-in-out,
+                    width 0.3s ease-in-out;
+
+                @include break('sm') {
+                    top: -1rem;
+                }
+            }
+
+            .text {
+                font-size: 1.25rem;
+                font-weight: 600;
+                transition: color 0.3s ease-in-out;
+            }
+
+            svg {
+                width: 1rem;
+                height: auto;
+                transition: transform 0.3s ease-in-out;
+
+                path {
+                    transition: stroke 0.3s ease-in-out;
+
+                }
+            }
+        }
+    }
+
+    .section-down {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        gap: 2rem;
+
+        @include break('xl') {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+        }
+
+        @include break('sm') {
+            display: grid;
+            grid-template-columns: repeat(1, 1fr);
+        }
+
+        &:hover {
+            .block:not(:hover) {
+                opacity: 0.7;
+                transform: scale(0.85);
+                box-shadow: 0rem 0rem 0.1rem $third_50;
+            }
+        }
+
+        .block {
+            padding: 3rem 2.5rem;
+            border: 1px solid $third_30;
+            border-radius: 8px;
+            position: relative;
+            box-shadow: 0.1rem 0.1rem 0.5rem $third_50;
+            transition:
+                box-shadow 0.3s ease-in-out,
+                opacity 0.3s ease-in-out,
+                transform 0.3s ease-in-out;
+
+            &:hover {
+                transform: scale(1.1);
+                box-shadow: 0.3rem 0.3rem 1.5rem $third_50;
+
+                h4 {
+                    color: $primary;
+                }
+
+                h2 {
+                    color: $secondary_50;
+                    opacity: 0.1;
+                }
+            }
+
+            svg {
+                height: 4rem;
+                width: auto;
+            }
+
+            h4 {
+                font-size: 1.5rem;
+                margin: 1.5rem 0 0.75rem;
+                transition: color 0.3s ease-in-out;
+            }
+
+            p {
+                font-size: 1rem;
+            }
+
+            h2 {
+                position: absolute;
+                top: 0.75rem;
+                right: 0.75rem;
+                height: fit-content;
+                width: fit-content;
+                font-size: 6.5rem;
+                line-height: 5rem;
+                opacity: 0.2;
+                color: $third_10;
+                transition:
+                    opacity 0.3s ease-in-out,
+                    color 0.3s ease-in-out;
+            }
+        }
+    }
+}

@@ -1,0 +1,148 @@
+@use "@/scss/config/index.scss" as *;
+
+.section-2 {
+    width: 100%;
+    height: 100%;
+    z-index: 50;
+
+    .sections {
+        position: fixed;
+        top: 50%;
+        right: -14rem;
+        transform: translateY(-50%);
+        height: 100%;
+        min-width: 14rem;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        user-select: none;
+        cursor: pointer;
+        transition: right 0.3s ease-in-out;
+
+        &:hover {
+            right: 0%;
+
+            .hook-open {
+                visibility: hidden;
+                opacity: 0;
+                left: 10%;
+            }
+        }
+
+        .hook-open {
+            position: absolute;
+            top: 50%;
+            left: -20%;
+            transform: translateY(-50%);
+            height: fit-content;
+            box-shadow: 0rem 0.15rem 1rem $primary;
+            background-color: $primary_50;
+            border-radius: 50% 0 0 50%;
+            padding: 0.75rem;
+            visibility: visible;
+            opacity: 0.8;
+            z-index: -1;
+            transition:
+                opacity 0.3s ease-in-out,
+                visibility 0.3s ease-in-out,
+                left 0.3s ease-in-out;
+
+            svg {
+                display: block;
+                width: 1.5rem;
+                height: auto;
+                cursor: pointer;
+                transform: rotate(-90deg);
+
+                path {
+                    fill: $primary;
+                }
+            }
+        }
+
+        .quick-view {
+            width: fit-content;
+            min-width: 100%;
+            border-left: 0.25rem solid $primary_60;
+            border-radius: 0.5rem 0 0 0.5rem;
+            height: fit-content;
+            background-color: #fff;
+            padding: 5rem 1rem 2rem;
+            display: flex;
+            flex-direction: column;
+            row-gap: 1rem;
+            height: 100%;
+
+            .page-view {
+                width: 100%;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                &:hover {
+                    h5 {
+                        text-decoration: underline;
+                        transform: scale(1.05) translateX(0.25rem);
+                        color: $primary;
+                    }
+                }
+
+                h5 {
+                    width: 100%;
+                    font-size: 1rem;
+                    transition:
+                        color 0.3s ease-in-out,
+                        transform 0.3s ease-in-out,
+                        text-decoration 0.3s ease-in-out;
+                }
+            }
+        }
+    }
+
+    .view-section {
+        position: fixed;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        background-color: #fff;
+        width: 65%;
+        height: 75%;
+        box-shadow: 0.25rem 0.5rem 2rem $primary;
+        border-radius: 2rem;
+        overflow: hidden;
+        display: none;
+        object-fit: contain;
+        visibility: hidden;
+        opacity: 0;
+        transition:
+            opacity 0.3s ease-in-out,
+            visibility 0.3s ease-in-out;
+
+        @include break('xxl') {
+            width: 60%;
+            height: 50%;
+        }
+
+        @include break('lg') {
+            left: 40%;
+            width: 65%;
+            height: 30%;
+        }
+
+        @include break('md') {
+            transform: translate(0%, -50%);
+            left: 5%;
+            width: 90%;
+            margin: 0 auto;
+        }
+
+        @include break('xs') {
+            height: 15%;
+        }
+
+        &.active {
+            visibility: visible;
+            opacity: 1;
+        }
+    }
+}

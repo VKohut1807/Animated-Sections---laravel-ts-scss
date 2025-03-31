@@ -1,0 +1,192 @@
+@use "@/scss/config/index.scss" as *;
+
+.section-4 {
+    background-color: $primary_20;
+    padding: 4rem 0;
+    width: 100%;
+    overflow: hidden;
+    position: relative;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 10%;
+        background-color: $third_10;
+        transition: height 0.3s ease-in-out;
+
+        @include break('md') {
+            height: 50%;
+        }
+    }
+
+    .canvas {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        @include break('md') {
+            flex-direction: column;
+        }
+
+        &::after {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 35%;
+            background-color: $third_10;
+            clip-path: polygon(0 0, 100% 0, 100% 100%, 0 50%);
+            z-index: 1;
+        }
+
+        .image {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 50%;
+            height: 100%;
+            z-index: 2;
+            display: flex;
+            flex-direction: column;
+            box-shadow: 0.25rem 0.25rem 2.5rem $third_50;
+            transition:
+                box-shadow 0.3s ease-in-out,
+                width 0.3s ease-in-out;
+
+            @include break('md') {
+                object-position: inherit;
+                position: relative;
+                width: 100%;
+                z-index: 1;
+                box-shadow: inherit;
+
+                &::after {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 35%;
+                    background-color: $third_10;
+                    clip-path: polygon(0 0, 100% 0, 100% 50%, 0 0%);
+                    z-index: 1;
+                }
+            }
+
+            img {
+                display: block;
+                width: 100%;
+                height: 100%;
+                object-position: 55%;
+                object-fit: fill;
+
+                @include break('md') {
+                    object-position: inherit;
+                    clip-path: polygon(0 0, 100% 0, 100% 77%, 0 100%);
+                }
+            }
+
+            .link {
+                --color-gradient: 0, 0, 0;
+                --initial-gradient:
+                    linear-gradient(rgb(var(--color-gradient)),
+                        rgb(var(--color-gradient)));
+                display: inline-flex;
+                justify-content: center;
+                align-items: center;
+                color: #fff;
+                font-weight: 700;
+                font-size: 1.25rem;
+                text-transform: uppercase;
+                border: 1px solid #000;
+                letter-spacing: .05em;
+                min-width: 15rem;
+                min-height: 4rem;
+                background-color: #0000;
+                background-image:
+                    var(--initial-gradient),
+                    linear-gradient(transparent, transparent);
+                background-size: 100% 100%, 0 100%;
+                background-position: right;
+                background-repeat: no-repeat;
+                transition:
+                    background-size 0.3s ease-in-out,
+                    background-position 0.3s step-end,
+                    color 0.3s ease-in-out,
+                    margin 0.3s ease-in-out,
+                    border 0.3s ease-in-out;
+                cursor: pointer;
+
+                &:not(:disabled):hover {
+                    border: 1px solid #000;
+                    color: #000;
+                    background-position: left;
+                    background-size: 0 100%, 100% 100%;
+                }
+
+                @include break('md') {
+                    margin: 0 15% 0 auto;
+                }
+            }
+        }
+
+        .wrapper {
+            @include break('md') {
+                z-index: 3;
+                order: -1;
+            }
+
+            .text {
+                padding: 20rem 0;
+                margin-left: 55%;
+                display: flex;
+                flex-direction: column;
+                height: fit-content;
+                transition:
+                    margin-left 0.3s ease-in-out,
+                    text-align 0.3s ease-in-out;
+
+                @include break('md') {
+                    text-align: center;
+                    margin-left: 0%;
+                    padding: 0;
+                }
+
+                h5 {
+                    text-transform: uppercase;
+                    font-size: 1rem;
+                    font-weight: 600;
+                    color: $third_50;
+                    transition: color 0.3s ease-in-out;
+
+                    @include break('md') {
+                        color: $third_120;
+                    }
+                }
+
+                h2 {
+                    font-size: 3rem;
+                    font-weight: 800;
+                    color: $third_120;
+                    margin: 2rem 0 1rem;
+                    transition: margin 0.3s ease-in-out;
+
+                    @include break('md') {
+                        margin: 0.75rem 0 0.25rem;
+                    }
+                }
+
+                p {
+                    font-size: 1.25rem;
+                    font-weight: 400;
+                    color: $third_120;
+                }
+            }
+        }
+    }
+}

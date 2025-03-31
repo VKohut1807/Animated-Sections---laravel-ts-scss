@@ -1,0 +1,82 @@
+[
+    {
+        "image": {
+            "name": "1.webp",
+            "alt": "image"
+        },
+        "text": {
+            "header": "Visit Us",
+            "subtitle": "Irish Wasington<br/> 365 York Ave"
+        }
+    },
+    {
+        "image": {
+            "name": "2.webp",
+            "alt": "image"
+        },
+        "text": {
+            "header": "Mouse",
+            "subtitle": "Primarily nocturnal animals, mice compensate ..."
+        }
+    },
+    {
+        "image": {
+            "name": "3.webp",
+            "alt": "image"
+        },
+        "text": {
+            "header": "Heron",
+            "subtitle": "Some members of this group nest colonially in trees, ..."
+        }
+    },
+    {
+        "image": {
+            "name": "4.webp",
+            "alt": "image"
+        },
+        "text": {
+            "header": "Raccoon",
+            "subtitle": "The original habitats of the raccoon..."
+        }
+    },
+    {
+        "image": {
+            "name": "5.webp",
+            "alt": "image"
+        },
+        "text": {
+            "header": "Snake",
+            "subtitle": "Living snakes are found on every continent except Antarctica..."
+        }
+    },
+    {
+        "image": {
+            "name": "6.webp",
+            "alt": "image"
+        },
+        "text": {
+            "header": "Lion",
+            "subtitle": "One of the most widely recognised animal symbols..."
+        }
+    },
+    {
+        "image": {
+            "name": "7.webp",
+            "alt": "image"
+        },
+        "text": {
+            "header": "Tiger",
+            "subtitle": "The tiger is among the most popular of the world's..."
+        }
+    },
+    {
+        "image": {
+            "name": "8.webp",
+            "alt": "image"
+        },
+        "text": {
+            "header": "Cat",
+            "subtitle": "Also ranges freely as a feral cat avoiding human contact..."
+        }
+    }
+]

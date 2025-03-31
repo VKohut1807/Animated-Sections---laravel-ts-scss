@@ -1,0 +1,101 @@
+@use "@/scss/config/index.scss" as *;
+
+.section-11 {
+    position: relative;
+    overflow: hidden;
+
+    img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-position: center 85%;
+    }
+
+    .content {
+        padding: 8rem 0;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+
+        .information {
+            color: $third_120;
+            padding: 5rem 3rem;
+            background-color: $primary_60;
+            ;
+            display: flex;
+            flex-direction: column;
+            gap: 2rem;
+            text-align: center;
+            z-index: 1;
+            width: fit-content;
+
+            h2 {
+                font-size: 2rem;
+            }
+
+            h4 {
+                font-size: 1.25rem;
+            }
+
+            .link {
+                position: relative;
+                background-color: #fff;
+                color: $third_120;
+                padding: 1rem 3rem;
+                width: fit-content;
+                text-transform: uppercase;
+                font-size: 1.4rem;
+                overflow: hidden;
+                border: 1px solid $third_120;
+                cursor: pointer;
+                margin: 0 auto;
+                transition:
+                    border-color 0.3s ease-in-out,
+                    transform 0.2s ease-in-out,
+                    padding 0.2s ease-in-out,
+                    color 0.3s ease-in-out;
+
+                @include break('xxs') {
+                    padding: 1rem 1.5rem;
+                }
+
+                &:after {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    pointer-events: none;
+                    background-color: $fifth;
+                    z-index: -1;
+                    transform: translateY(100%);
+                    transition: transform 0.3s ease-in-out;
+                }
+
+                &:hover {
+                    border-color: #fff;
+                    color: #fff;
+                    transform: translateY(-0.4rem);
+
+                    &:after {
+                        transform: translateY(0%);
+                    }
+                }
+
+                .letter {
+                    display: inline-block;
+                    transition: transform 0.2s ease-out;
+
+                    &:hover {
+                        transform: translateY(-0.4rem);
+                    }
+                }
+            }
+        }
+    }
+}

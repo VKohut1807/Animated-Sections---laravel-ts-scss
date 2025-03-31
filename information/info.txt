@@ -1,0 +1,2 @@
+#Laravel version used --- `v12.0.3`
+#PHP version used --- `v8.2.21`

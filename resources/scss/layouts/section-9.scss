@@ -1,0 +1,161 @@
+@use "@/scss/config/index.scss" as *;
+
+.section-9 {
+    padding: 4rem 0;
+
+    .group {
+        display: flex;
+        flex-direction: column;
+        gap: 3rem;
+
+        .header {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 0.25rem;
+
+            h2 {
+                font-size: 3.5rem;
+                font-weight: 600;
+                text-transform: uppercase;
+            }
+
+            .signature {
+                display: block;
+                height: 4rem;
+                width: auto;
+
+                path {
+                    fill: $primary;
+                }
+            }
+        }
+
+        .gallery {
+            display: flex;
+            flex-direction: row;
+            --rowImages: 3;
+
+            @include break('xl') {
+                display: grid;
+                justify-items: center;
+                grid-template-columns: repeat(3, 1fr);
+            }
+
+            @include break('lg') {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            @include break('sm') {
+                grid-template-columns: 1fr;
+            }
+
+            .link {
+                width: calc(100% / var(--countImage));
+                height: 25rem;
+                transition: width 0.3s ease-in-out;
+                position: relative;
+                padding: 0.75rem;
+                overflow: hidden;
+                transition: width 0.3s ease-in-out;
+
+                @include break('xl') {
+                    width: 100%;
+                }
+
+                &:hover {
+                    width: calc(100% / var(--countImage) * 2.5);
+
+                    @include break('xl') {
+                        width: 100%;
+                    }
+
+                    img {
+                        object-position: 50% 0%;
+                        user-select: none;
+
+                        @include break('xl') {
+                            object-position: 50% -65%;
+                            transform: scale(2);
+                        }
+
+                        @include break('lg') {
+                            object-position: 50% -125%;
+                            transform: scale(1.25);
+                        }
+
+                        @include break('sm') {
+                            object-position: 50% 50%;
+                            transform: scale(1.05);
+                        }
+                    }
+
+                    .info {
+                        font-size: 1.25rem;
+
+                        @include break('xl') {
+                            border-radius: 0 2rem 2rem 2rem;
+                        }
+
+                        @include break('md') {
+                            border-radius: 2rem;
+                        }
+                    }
+                }
+
+                img {
+                    display: block;
+                    max-width: 100%;
+                    width: 100%;
+                    object-fit: cover;
+                    transition:
+                        object-position 0.3s ease-in-out,
+                        transform 0.3s ease-in-out;
+
+                    @include break('xl') {
+                        object-position: 50% -0%;
+                    }
+
+                    @include break('lg') {
+                        object-fit: contain;
+                    }
+                }
+
+                .info {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: fit-content;
+                    font-size: 1rem;
+                    font-weight: 600;
+                    font-style: italic;
+                    padding: 0.75rem;
+                    background-color: #fff;
+                    border-radius: 2rem;
+                    background-color: $primary_20;
+                    transition:
+                        top 0.3s ease-in-out,
+                        left 0.3s ease-in-out,
+                        transform 0.3s ease-in-out,
+                        border-radius 0.3s ease-in-out,
+                        font-size 0.3s ease-in-out;
+
+                    @include break('lg') {
+                        left: 2rem;
+                    }
+
+                    @include break('md') {
+                        left: 0rem;
+                        top: 90%;
+                        transform: translateY(-100%);
+                    }
+
+                    @include break('sm') {
+                        left: 50%;
+                        transform: translate(25%, -100%);
+                    }
+                }
+            }
+        }
+    }
+}

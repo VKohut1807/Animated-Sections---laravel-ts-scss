@@ -1,0 +1,32 @@
+[
+    {
+        "position": "Administrator",
+        "alt": "image",
+        "src": "1.webp"
+    },
+    {
+        "position": "Planner",
+        "alt": "image",
+        "src": "6.webp"
+    },
+    {
+        "position": "Secretary",
+        "alt": "image",
+        "src": "5.webp"
+    },
+    {
+        "position": "Manager",
+        "alt": "image",
+        "src": "2.webp"
+    },
+    {
+        "position": "Consultant",
+        "alt": "image",
+        "src": "3.webp"
+    },
+    {
+        "position": "Instructor",
+        "alt": "image",
+        "src": "4.webp"
+    }
+]
