@@ -1,0 +1,80 @@
+@use "@/scss/config/index.scss" as *;
+
+.section-14 {
+    .content {
+        display: grid;
+        grid-template-columns: 1fr 2fr;
+        column-gap: 0.5rem;
+
+        .first-column {
+            .card-box {
+                position: sticky;
+                top: 0;
+                display: flex;
+                flex-direction: column;
+                gap: 1rem;
+                height: fit-content;
+
+                h2 {
+                    font-size: 2rem;
+                }
+
+                p {
+                    font-size: 1rem;
+                }
+            }
+        }
+
+        .second-column {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 0.75rem;
+
+            .card-box {
+                position: relative;
+                aspect-ratio: 1 / 1;
+                padding: 1.5rem 1rem 1.5rem 2.5rem;
+                display: flex;
+                border-radius: 0.5rem;
+                overflow: hidden;
+                box-shadow: 0 0 1rem $third_60;
+
+                .image {
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    object-fit: cover;
+                    z-index: -1;
+                }
+
+                .info {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 1rem;
+                    height: fit-content;
+
+                    h2 {
+                        font-size: 2rem;
+                    }
+
+                    p {
+                        font-size: 1rem;
+                    }
+
+                    &.offset {
+                        color: #fff;
+                        margin-top: auto;
+                    }
+
+                    &.half {
+                        max-width: 70%;
+                    }
+                }
+
+                &:last-child {
+                    grid-column: 2/3;
+                }
+            }
+        }
+    }
+}

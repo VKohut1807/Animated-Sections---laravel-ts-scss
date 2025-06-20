@@ -1,0 +1,66 @@
+[
+    {
+        "info": {
+            "title": "What we stand for",
+            "subtitle": "Our values shape every aspect of our work - from designing learning experiences to supporting future tech talent."
+        },
+        "image-box": {
+            "background-color": "inerhid",
+            "color": "inerhid"
+        }
+    },
+    {
+        "info": {
+            "offset": "half",
+            "title": "Lead with empathy",
+            "subtitle": "We build spaces that feel inclusive and safe for everyone - no matter their background, identity, or experience."
+        },
+        "image-box": {
+            "image-name": "1.webp",
+            "alt": "image"
+        }
+    },
+    {
+        "info": {
+            "offset": "offset",
+            "title": "Stay curious, keep growing",
+            "subtitle": "We embrace challenges, learn from mistakes, and support each other in becoming our best selves."
+        },
+        "image-box": {
+            "image-name": "2.webp",
+            "alt": "image"
+        }
+    },
+    {
+        "info": {
+            "offset": "offset",
+            "title": "Celebrate contributions",
+            "subtitle": "We recognize effort, honor achievements, and cheer each other on - big wins or small."
+        },
+        "image-box": {
+            "image-name": "3.webp",
+            "alt": "image"
+        }
+    },
+    {
+        "info": {
+            "title": "Set the standard",
+            "subtitle": "We aim to inspire change and show what thoughtful, human - focused online education can look like."
+        },
+        "image-box": {
+            "image-name": "4.webp",
+            "alt": "image"
+        }
+    },
+    {
+        "info": {
+            "offset": "half",
+            "title": "Empower potential",
+            "subtitle": "We believe everyone can build a career they love - and we’re here to help them realize that <br> potential."
+        },
+        "image-box": {
+            "image-name": "5.webp",
+            "alt": "image"
+        }
+    }
+]

@@ -1,2 +1,4 @@
 #Laravel version used --- `v12.0.3`
-#PHP version used --- `v8.2.21`
+#PHP version used --- `v8.4.8`
+#NPM version used --- `v10.8.1`
+#NODE version used --- `v20.14.0`
