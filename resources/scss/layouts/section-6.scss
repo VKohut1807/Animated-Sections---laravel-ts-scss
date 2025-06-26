@@ -1,4 +1,5 @@
-@use "@/scss/config/index.scss" as *;
+@use "@/scss/config" as *;
+@use "@/scss/animations" as *;
 
 .section-6 {
     background-color: $primary_60;
@@ -105,20 +106,6 @@
                     }
                 }
             }
-        }
-    }
-
-    @keyframes mouse-click {
-
-        0%,
-        100% {
-            fill: transparent;
-            transform: scale(1);
-        }
-
-        50% {
-            fill: #fff;
-            transform: scale(1.1);
         }
     }
 }

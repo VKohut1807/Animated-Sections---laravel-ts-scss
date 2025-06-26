@@ -1,0 +1,101 @@
+@use "@/scss/config" as *;
+
+@keyframes endless {
+    0% {
+        transform: translate(0);
+    }
+
+    100% {
+        transform: translate(calc(-100% + 100vw));
+    }
+}
+
+@keyframes mouse-click {
+
+    0%,
+    100% {
+        fill: transparent;
+        transform: scale(1);
+    }
+
+    50% {
+        fill: #fff;
+        transform: scale(1.1);
+    }
+}
+
+@keyframes scroll-top {
+
+    0%,
+    100% {
+        stroke: $primary_20;
+    }
+
+    50% {
+        stroke: $primary_120;
+    }
+}
+
+@keyframes fall-Y {
+
+    0%,
+    100% {
+        transform: translate(0%, -5%);
+    }
+
+    50% {
+        transform: translate(0%, 25%);
+    }
+}
+
+@keyframes fall-X {
+
+    0%,
+    100% {
+        transform: translate(3%, 0%);
+    }
+
+    50% {
+        transform: translate(30%, 0);
+    }
+}
+
+@keyframes shineHorizontal {
+    0% {
+        transform: translateX(-100%) translateY(-50%);
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 0.75;
+    }
+
+    70% {
+        opacity: 0.75;
+    }
+
+    100% {
+        transform: translateX(100%) translateY(-50%);
+        opacity: 0;
+    }
+}
+
+@keyframes shineVertical {
+    0% {
+        transform: translateX(-50%) translateY(-100%);
+        opacity: 0;
+    }
+
+    30% {
+        opacity: 0.75;
+    }
+
+    70% {
+        opacity: 0.75;
+    }
+
+    100% {
+        transform: translateX(-50%) translateY(100%);
+        opacity: 0;
+    }
+}
