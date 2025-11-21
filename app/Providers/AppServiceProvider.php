@@ -2,7 +2,10 @@
 
 namespace App\Providers;
 
+<<<<<<< HEAD
 use Illuminate\Support\Facades\Blade;
+=======
+>>>>>>> 1d53d9c (feat:add-docker)
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -20,6 +23,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
+<<<<<<< HEAD
         // svg-directive for include svg, example:
         // @svg('/svg/section-1/bulb-icon.svg', 'id="id_svg" width="100" height="100" class="icon"')
         Blade::directive('svg', function ($arguments) {
@@ -43,5 +47,8 @@ class AppServiceProvider extends ServiceProvider
             }
             return $svgStr;
         });
+=======
+        //
+>>>>>>> 1d53d9c (feat:add-docker)
     }
 }

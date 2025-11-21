@@ -1,6 +1,7 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+<<<<<<< HEAD
 use App\Http\Controllers\PageController;
 
 $routesConfig = config('routes-config');
@@ -14,3 +15,9 @@ foreach ($routesConfig as $key => $val) {
 
     Route::view('/' . $routePath, 'layouts.' . $viewName)->name($routeName);
 };
+=======
+
+Route::get('/', function () {
+    return view('welcome');
+});
+>>>>>>> 1d53d9c (feat:add-docker)
