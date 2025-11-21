@@ -18,7 +18,11 @@
                 <p>Save your valuable time and energy by finding a solution quickly.</p>
                 <a href="#" class="link">
                     Contact us now
+<<<<<<< HEAD
                     @svg('/svg/section-6/mouse-click.svg', class="icon")
+=======
+                    @svgPublic('/svg/section-6/mouse-click.svg', class="icon")
+>>>>>>> f9a9859 (feat:add-project)
                 </a>
             </div>
         </div>

@@ -1,4 +1,11 @@
+<<<<<<< HEAD
 #Laravel version used --- `v12.0.3`
 #PHP version used --- `v8.4.8`
 #NPM version used --- `v10.8.1`
 #NODE version used --- `v20.14.0`
+=======
+#Laravel version used --- `v12.39.0`
+#PHP version used --- `v8.4.15`
+#NPM version used --- `v11.6.3`
+#NODE version used --- `v22.21.0`
+>>>>>>> f9a9859 (feat:add-project)

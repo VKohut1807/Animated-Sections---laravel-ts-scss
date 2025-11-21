@@ -17,13 +17,18 @@
                 <h3>How to Apply</h3>
                 <a href="#" class="right">
                     <span class="text">View All Requirements</span>
+<<<<<<< HEAD
                     @svg('/svg/section-1/arrow-right-icon.svg')
+=======
+                    @svgPublic('/svg/section-1/arrow-right-icon.svg')
+>>>>>>> f9a9859 (feat:add-project)
                 </a>
             </div>
             <div class="section-down">
                 @foreach ($dataJson1 as $elem)
                     <a href="#" class="block">
                         @if ($elem['number'] == 1)
+<<<<<<< HEAD
                             @svg('/svg/section-1/bulb-icon.svg')
                         @elseif ($elem['number'] == 2)
                             @svg('/svg/section-1/hat-icon.svg')
@@ -31,6 +36,15 @@
                             @svg('/svg/section-1/id-card-icon.svg')
                         @else
                             @svg('/svg/section-1/medal-icon.svg')
+=======
+                            @svgPublic('/svg/section-1/bulb-icon.svg')
+                        @elseif ($elem['number'] == 2)
+                            @svgPublic('/svg/section-1/hat-icon.svg')
+                        @elseif ($elem['number'] == 3)
+                            @svgPublic('/svg/section-1/id-card-icon.svg')
+                        @else
+                            @svgPublic('/svg/section-1/medal-icon.svg')
+>>>>>>> f9a9859 (feat:add-project)
                         @endif
                         <h4>{{ $elem['name'] }}</h4>
                         <p>{{ $elem['descr'] }}</p>

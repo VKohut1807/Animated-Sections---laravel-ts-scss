@@ -13,8 +13,13 @@
 
     <section class="section-7">
         <div data-scroll-progress class="circle-box">
+<<<<<<< HEAD
             @svg('/svg/section-7/arrow-up.svg', class="icon-arrow")
             @svg('/svg/section-7/circle.svg', class="icon-circle")
+=======
+            @svgPublic('/svg/section-7/arrow-up.svg', class="icon-arrow")
+            @svgPublic('/svg/section-7/circle.svg', class="icon-circle")
+>>>>>>> f9a9859 (feat:add-project)
         </div>
     </section>
 @endsection
