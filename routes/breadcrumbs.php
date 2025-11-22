@@ -17,9 +17,5 @@ foreach ($routesConfig as $key => $val) {
     Breadcrumbs::for($viewName, function (BreadcrumbTrail $trail) use ($routeName, $routePath): void {
         $trail->parent('home');
         $trail->push(__($routeName), route($routePath));
-        $trail->push(__($routeName), route($routePath));
-        $trail->push(__($routeName), route($routePath));
-        $trail->push(__($routeName), route($routePath));
-        $trail->push(__($routeName), route($routePath));
     });
 };
