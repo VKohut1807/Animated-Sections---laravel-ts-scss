@@ -22,7 +22,7 @@ jobs:
         run: yarn build
 
       - name: Upload frontend (public/build)
-        uses: genietim/ftp-action@releases/v4
+        uses: GenieTim/ftp-action@v4.0.1
         with:
           host: ${{ secrets.SFTP_HOST }}
           user: ${{ secrets.SFTP_USER }}
@@ -31,7 +31,7 @@ jobs:
           remoteDir: "public_html/build"
 
       - name: Upload backend (Laravel)
-        uses: genietim/ftp-action@releases/v4
+        uses: GenieTim/ftp-action@v4.0.1
         with:
           host: ${{ secrets.SFTP_HOST }}
           user: ${{ secrets.SFTP_USER }}
