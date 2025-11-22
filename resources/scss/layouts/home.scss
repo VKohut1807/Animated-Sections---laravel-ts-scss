@@ -1,7 +1,7 @@
 @use "@scss/config" as *;
 
 .home-page {
-    background-color: $primary_50;
+    background-color: $primary_10;
     width: 100%;
     height: fit-content;
     min-height: 100dvh;
@@ -38,7 +38,7 @@
             border-radius: 0.5rem;
             overflow: hidden;
             border: 0.0625rem solid $secondary;
-            box-shadow: 0rem 0.15rem 1rem $primary;
+            box-shadow: 0rem 0.15rem 1rem $secondary_20;
 
             &:hover {
                 img {

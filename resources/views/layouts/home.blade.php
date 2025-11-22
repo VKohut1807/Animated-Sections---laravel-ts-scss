@@ -14,7 +14,7 @@
 
 @section('content')
     <div id="home-page" class="home-page">
-        <div class="wrapper">
+        <div class="wrapper mt2">
             <h1>My sections</h1>
             <section class="home-section">
                 @foreach ($routesConfig as $key => $value)
