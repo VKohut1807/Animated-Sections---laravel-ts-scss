@@ -2,11 +2,12 @@ name: Deploy to Smallhost
 
 on:
   push:
-    branches: [ "main" ]
+    branches: [ "main" ] 
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest
+
     steps:
       - name: Checkout repo
         uses: actions/checkout@v4
@@ -15,16 +16,26 @@ jobs:
         run: composer install --no-dev --prefer-dist
 
       - name: Install Node dependencies
-        run: npm install
+        run: yarn install
 
       - name: Build frontend
-        run: npm run build
+        run: yarn build
 
-      - name: Upload via SFTP
-        uses: sebastianpopp/ftp-action@releases/v2
+      - name: Upload frontend (public/build)
+        uses: genietim/ftp-action@releases/v4
         with:
           host: ${{ secrets.SFTP_HOST }}
           user: ${{ secrets.SFTP_USER }}
           password: ${{ secrets.SFTP_PASS }}
-          localDir: "./public/build"
-          remoteDir: "/usr/home/VKohut1807/domains/animated-sections---laravel-ts-scss.vkohut1807.smallhost.pl/public_html/build"
+          localDir: "public/build"
+          remoteDir: "public_html/build"
+
+      - name: Upload backend (Laravel)
+        uses: genietim/ftp-action@releases/v4
+        with:
+          host: ${{ secrets.SFTP_HOST }}
+          user: ${{ secrets.SFTP_USER }}
+          password: ${{ secrets.SFTP_PASS }}
+          localDir: "."
+          remoteDir: "."
+          exclude: "public/build"
