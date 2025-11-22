@@ -29,10 +29,10 @@ jobs:
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
           protocol: ftps
-          local-dir: public/build
-          server-dir: public_html/build
-          dry-run: false
-          git-ftp-args: --insecure
+          security: explicit
+          local-dir: public/build/
+          server-dir: public_html/build/
+          dry-run: false  
 
       - name: Upload backend via FTPS
         uses: SamKirkland/FTP-Deploy-Action@v4.3.6
@@ -41,7 +41,8 @@ jobs:
           username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
           protocol: ftps
-          local-dir: .
-          server-dir: .
+          security: explicit
+          local-dir: ./
+          server-dir: ./
+          exclude: public/build/
           dry-run: false
-          git-ftp-args: --exclude public/build --insecure
