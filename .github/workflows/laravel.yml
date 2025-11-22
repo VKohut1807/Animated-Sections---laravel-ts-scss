@@ -27,4 +27,4 @@ jobs:
           user: ${{ secrets.SFTP_USER }}
           password: ${{ secrets.SFTP_PASS }}
           localDir: "./public/build"
-          remoteDir: "/domains/animated-sections---laravel-ts-scss.vkohut1807.smallhost.pl/public_html/build"
+          remoteDir: "/usr/home/VKohut1807/domains/animated-sections---laravel-ts-scss.vkohut1807.smallhost.pl/public_html/build"
