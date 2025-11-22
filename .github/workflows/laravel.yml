@@ -21,10 +21,10 @@ jobs:
         run: npm run build
 
       - name: Upload via SFTP
-        uses: sebastianpopp/sftp-action@v2.0
+        uses: sebastianpopp/ftp-action@releases/v2
         with:
           host: ${{ secrets.SFTP_HOST }}
           username: ${{ secrets.SFTP_USER }}
           password: ${{ secrets.SFTP_PASS }}
-          localPath: "./"
-          remotePath: "/domains/animated-sections---laravel-ts-scss.vkohut1807.smallhost.pl/public_html/"
+          localPath: "./public/build"
+          remotePath: "/domains/animated-sections---laravel-ts-scss.vkohut1807.smallhost.pl/public_html/build"
