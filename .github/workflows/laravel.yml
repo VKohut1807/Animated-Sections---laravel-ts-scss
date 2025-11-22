@@ -31,7 +31,7 @@ jobs:
           protocol: ftps
           security: loose
           local-dir: public/build/
-          server-dir: public_html/build/
+          server-dir: domains/animated-sections---laravel-ts-scss.vkohut1807.smallhost.pl/public_html/build/
           dry-run: false  
 
       - name: Upload backend via FTPS
@@ -43,6 +43,6 @@ jobs:
           protocol: ftps
           security: loose
           local-dir: ./
-          server-dir: ./
+          server-dir: domains/animated-sections---laravel-ts-scss.vkohut1807.smallhost.pl
           exclude: public/build/
           dry-run: false
