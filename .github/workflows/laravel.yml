@@ -38,4 +38,4 @@ jobs:
           password: ${{ secrets.SFTP_PASS }}
           localDir: "."
           remoteDir: "."
-          exclude: "public/build"
+          exclude: "public/build" 
