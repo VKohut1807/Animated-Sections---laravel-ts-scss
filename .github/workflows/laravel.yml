@@ -1,15 +1,16 @@
-name: Deploy to Smallhost
+name: 🚀 Deploy website on push
 
 on:
   push:
-    branches: [ "main" ] 
+    branches: [ "main" ]  
 
 jobs:
-  build-and-deploy:
+  web-deploy:
+    name: 🎉 Deploy
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout repo
+      - name: 🚚 Get latest code
         uses: actions/checkout@v4
 
       - name: Install PHP dependencies
@@ -21,21 +22,26 @@ jobs:
       - name: Build frontend
         run: yarn build
 
-      - name: Upload frontend (public/build)
-        uses: genietim/ftp-action@v4
+      - name: Upload frontend via FTPS
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
-          host: ${{ secrets.FTP_HOST }}
-          user: ${{ secrets.FTP_USER }}
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
-          localDir: "public/build"
-          remoteDir: "public_html/build"
+          protocol: ftps
+          local-dir: public/build
+          server-dir: public_html/build
+          dry-run: false
+          git-ftp-args: --insecure
 
-      - name: Upload backend (Laravel)
-        uses: genietim/ftp-action@v4
+      - name: Upload backend via FTPS
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.6
         with:
-          host: ${{ secrets.FTP_HOST }}
-          user: ${{ secrets.FTP_USER }}
+          server: ${{ secrets.FTP_SERVER }}
+          username: ${{ secrets.FTP_USER }}
           password: ${{ secrets.FTP_PASS }}
-          localDir: "."
-          remoteDir: "."
-          exclude: "public/build"
+          protocol: ftps
+          local-dir: .
+          server-dir: .
+          dry-run: false
+          git-ftp-args: --exclude public/build --insecure
