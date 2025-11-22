@@ -1,8 +1,5 @@
 # Release Notes
 
-<<<<<<< HEAD
-## [Unreleased](https://github.com/laravel/laravel/compare/v12.0.2...12.x)
-=======
 ## [Unreleased](https://github.com/laravel/laravel/compare/v12.10.0...12.x)
 
 ## [v12.10.0](https://github.com/laravel/laravel/compare/v12.9.1...v12.10.0) - 2025-11-04
@@ -115,7 +112,6 @@
 * [12.x] Refactor: Structural improvement for clarity by [@AhmedAlaa4611](https://github.com/AhmedAlaa4611) in https://github.com/laravel/laravel/pull/6574
 * Bump axios from 1.7.9 to 1.8.2 - Vulnerability patch by [@abdel-aouby](https://github.com/abdel-aouby) in https://github.com/laravel/laravel/pull/6572
 * [12.x] Remove Unnecessarily [@source](https://github.com/source) by [@AhmedAlaa4611](https://github.com/AhmedAlaa4611) in https://github.com/laravel/laravel/pull/6584
->>>>>>> 1d53d9c (feat:add-docker)
 
 ## [v12.0.2](https://github.com/laravel/laravel/compare/v12.0.1...v12.0.2) - 2025-03-04
 

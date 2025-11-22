@@ -22,6 +22,7 @@
 
 
 <body>
+    @vite('resources/ts/partials/breadcrumbs.ts')
 
     @if (!request()->is('section-2'))
         @php

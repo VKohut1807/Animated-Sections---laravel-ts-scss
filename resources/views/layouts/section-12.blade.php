@@ -5,6 +5,8 @@
 @endsection
 
 @section('content')
+    {{ Breadcrumbs::render() }}
+
     <section class="section-12">
         <div class="wrapper">
             <div class="content">

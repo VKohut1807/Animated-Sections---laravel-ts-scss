@@ -11,6 +11,8 @@
         $dataJson3 = json_decode($jsonContent, true);
     @endphp
 
+    {{ Breadcrumbs::render() }}
+
     <section id="section-3" class="section-3">
         <div class="wrapper">
             <h3>FAQ's</h3>

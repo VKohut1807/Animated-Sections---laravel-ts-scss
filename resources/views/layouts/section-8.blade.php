@@ -15,6 +15,8 @@
         $percent3 = 92;
     @endphp
 
+    {{ Breadcrumbs::render() }}
+
     <section style="height: 50rem; background-color: #f3f3da;"></section>
 
     <section id="section-8" class="section-8">
@@ -38,7 +40,8 @@
                                 <div class="line-info">{{ $percent2 }}%</div>
                             </div>
                         </div>
-                        <div class="percent" data-percentage="{{ $percent3 }}">Customer engagement: {{ $percent3 }}%
+                        <div class="percent" data-percentage="{{ $percent3 }}">Customer engagement:
+                            {{ $percent3 }}%
                             <div class="line" data-line style="--custom-width: {{ $percent3 }}%;">
                                 <div class="line-info">{{ $percent3 }}%</div>
                             </div>

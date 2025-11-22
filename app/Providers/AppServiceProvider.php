@@ -2,14 +2,7 @@
 
 namespace App\Providers;
 
-<<<<<<< HEAD
-<<<<<<< HEAD
 use Illuminate\Support\Facades\Blade;
-=======
->>>>>>> 1d53d9c (feat:add-docker)
-=======
-use Illuminate\Support\Facades\Blade;
->>>>>>> f9a9859 (feat:add-project)
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -27,12 +20,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-<<<<<<< HEAD
-<<<<<<< HEAD
+
         // svg-directive for include svg, example:
         // @svg('/svg/section-1/bulb-icon.svg', 'id="id_svg" width="100" height="100" class="icon"')
-=======
->>>>>>> f9a9859 (feat:add-project)
         Blade::directive('svg', function ($arguments) {
             $args = explode(',', trim($arguments, "() "));
             $path = trim($args[0], "' ");
@@ -40,8 +30,6 @@ class AppServiceProvider extends ServiceProvider
             $svg = new \DOMDocument();
             $svgStr = '';
 
-<<<<<<< HEAD
-=======
             if (@$svg->load(resource_path($path))) {
                 if (!empty($attributes)) {
                     $attrPairs = explode(' ', $attributes);
@@ -64,7 +52,6 @@ class AppServiceProvider extends ServiceProvider
             $svg = new \DOMDocument();
             $svgStr = '';
 
->>>>>>> f9a9859 (feat:add-project)
             if (@$svg->load(public_path($path))) {
                 if (!empty($attributes)) {
                     $attrPairs = explode(' ', $attributes);
@@ -79,11 +66,5 @@ class AppServiceProvider extends ServiceProvider
             }
             return $svgStr;
         });
-<<<<<<< HEAD
-=======
-        //
->>>>>>> 1d53d9c (feat:add-docker)
-=======
->>>>>>> f9a9859 (feat:add-project)
     }
 }

@@ -9,6 +9,8 @@
         $textButton = str_split('Learn Now');
     @endphp
 
+    {{ Breadcrumbs::render() }}
+
     <section class="section-10">
         <div class="wrapper">
             <div class="content">

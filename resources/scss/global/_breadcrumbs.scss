@@ -1,0 +1,135 @@
+@use "../config/mixins" as *;
+@use "../config/colors" as *;
+
+.breadcrumbs {
+    $columnGap: 0.75rem;
+    $height: 2.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    @include break("md") {
+        overflow: hidden;
+        height: calc($height * 2);
+        flex-direction: row;
+        align-items: unset;
+        width: 100%;
+        position: relative;
+    }
+
+    .before-items,
+    .after-items {
+        display: none;
+        position: absolute;
+        top: 0;
+        height: 100%;
+        min-width: 7.5%;
+        z-index: 2;
+
+        @include break("md") {
+            display: block;
+        }
+    }
+
+    .before-items {
+        left: 0;
+        background-image: linear-gradient(to left, rgba(255, 255, 255, 0), #fff);
+    }
+
+    .after-items {
+        right: 0;
+        background-image: linear-gradient(to right, rgba(255, 255, 255, 0), #fff);
+    }
+
+    .breadcrumbs-items {
+        display: flex;
+        column-gap: $columnGap;
+
+        @include break("md") {
+            overflow: auto hidden;
+            flex-direction: row;
+            align-items: center;
+            height: calc($height * 2);
+            padding: 0 5% $height;
+        }
+
+        .home-wrapper {
+            a {
+                display: block;
+            }
+
+            .home-icon {
+                height: 1.25rem;
+                width: auto;
+                cursor: pointer;
+
+                path {
+                    fill: $primary_80;
+                    transition: fill 0.3s ease-in-out;
+                }
+
+                &:hover {
+                    path {
+                        fill: $primary_60;
+                    }
+                }
+            }
+        }
+
+        .items-wrapper {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            padding: 0;
+            margin: 0;
+            column-gap: $columnGap;
+            row-gap: 0.5rem;
+
+            @include break("md") {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                flex-wrap: nowrap;
+            }
+
+            // for safari "last-child"
+            .breadcrumb-item:last-child {
+                @include break("md") {
+                    padding-right: 5%;
+                }
+            }
+
+            .breadcrumb-item {
+                display: flex;
+                align-items: center;
+                column-gap: $columnGap;
+                text-wrap: nowrap;
+
+                svg {
+                    path {
+                        fill: $third_60;
+                    }
+                }
+
+                a {
+                    white-space: nowrap;
+                    text-wrap: nowrap;
+                    color: $third_60;
+                    font-size: 1rem;
+                    transition: color 0.3s ease-in-out;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: $secondary;
+                    }
+                }
+
+                .active {
+                    color: $secondary;
+                    font-size: 1rem;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

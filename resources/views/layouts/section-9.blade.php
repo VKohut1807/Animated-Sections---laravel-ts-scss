@@ -11,20 +11,16 @@
         $dataJson9 = json_decode($jsonContent, true);
     @endphp
 
+    {{ Breadcrumbs::render() }}
+
     <section class="section-9">
         <div class="wrapper">
             <div class="group">
                 <div class="header">
                     <h2>minju</h2>
-<<<<<<< HEAD
-                    @svg('/svg/section-9/signature.svg', class="signature")
-                </div>
-                <div class="gallery" style="--countImage: {{count($dataJson9)}};">
-=======
                     @svgPublic('/svg/section-9/signature.svg', class="signature")
                 </div>
                 <div class="gallery" style="--countImage: {{ count($dataJson9) }};">
->>>>>>> f9a9859 (feat:add-project)
                     @foreach ($dataJson9 as $image)
                         <a href="#" class="link">
                             <img src="/images/section-9/{{ $image['src'] }}" alt="{{ $image['alt'] }}">

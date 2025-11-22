@@ -13,6 +13,8 @@
         $textButton = str_split('Learn More');
     @endphp
 
+    {{ Breadcrumbs::render() }}
+
     <section style="height: 100rem; background-color: #f3f3da;"></section>
 
     <section data-section-selector class="section-11">

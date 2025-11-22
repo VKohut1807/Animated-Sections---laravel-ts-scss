@@ -4,6 +4,8 @@
     @vite('resources/scss/layouts/section-4.scss')
 @endsection
 
+{{ Breadcrumbs::render() }}
+
 @section('content')
     <section id="section-4" class="section-4">
         <div class="canvas">

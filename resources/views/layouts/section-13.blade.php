@@ -11,6 +11,8 @@
         $dataJson13 = json_decode($jsonContent, true);
     @endphp
 
+    {{ Breadcrumbs::render() }}
+
     <section class="section-13">
         <div class="wrapper">
             <div class="content">
@@ -19,13 +21,8 @@
                     @foreach ($dataJson13 as $key => $card)
                         <div class="card-box">
                             <div class="card front">
-<<<<<<< HEAD
-                                <img src="/images/section-13/{{ $card['image']['name'] }}"
-                                    alt="{{ $card['image']['alt'] }}" class="gallery-image">
-=======
                                 <img src="/images/section-13/{{ $card['image']['name'] }}" alt="{{ $card['image']['alt'] }}"
                                     class="gallery-image">
->>>>>>> f9a9859 (feat:add-project)
                             </div>
                             <div class="card back">
                                 <h4>{{ $card['text']['header'] }}</h4>
@@ -34,13 +31,8 @@
                         </div>
                     @endforeach
 
-<<<<<<< HEAD
-                    @svg('/svg/section-13/triangle.svg', class="triangle-icon")
-                    @svg('/svg/section-13/background-icon.svg', class="background-icon")
-=======
                     @svgPublic('/svg/section-13/triangle.svg', class="triangle-icon")
                     @svgPublic('/svg/section-13/background-icon.svg', class="background-icon")
->>>>>>> f9a9859 (feat:add-project)
                 </div>
             </div>
         </div>

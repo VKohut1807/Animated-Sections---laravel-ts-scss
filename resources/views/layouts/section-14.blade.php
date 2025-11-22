@@ -11,6 +11,8 @@
         $dataJson14 = json_decode($jsonContent, true);
     @endphp
 
+    {{ Breadcrumbs::render() }}
+
     <section style="height: 10rem; background-color: #f3f3da;"></section>
 
     <section class="section-14">
