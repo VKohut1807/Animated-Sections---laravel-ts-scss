@@ -22,20 +22,21 @@ jobs:
         run: yarn build
 
       - name: Upload frontend (public/build)
-        uses: GenieTim/ftp-action@v4.0.1
+        uses: appleboy/scp-action@v0.1.4
         with:
           host: ${{ secrets.SFTP_HOST }}
-          user: ${{ secrets.SFTP_USER }}
+          username: ${{ secrets.SFTP_USER }}
           password: ${{ secrets.SFTP_PASS }}
-          localDir: "public/build"
-          remoteDir: "public_html/build"
+          port: 22
+          source: "public/build/*"
+          target: "public_html/build"
 
       - name: Upload backend (Laravel)
-        uses: GenieTim/ftp-action@v4.0.1
+        uses: appleboy/scp-action@v0.1.4
         with:
           host: ${{ secrets.SFTP_HOST }}
-          user: ${{ secrets.SFTP_USER }}
+          username: ${{ secrets.SFTP_USER }}
           password: ${{ secrets.SFTP_PASS }}
-          localDir: "."
-          remoteDir: "."
-          exclude: "public/build" 
+          port: 22
+          source: "./{app,bootstrap,config,database,routes,resources,storage,vendor,artisan,.env}"
+          target: "."
