@@ -43,6 +43,6 @@ jobs:
           protocol: ftps
           security: loose
           local-dir: ./
-          server-dir: domains/animated-sections---laravel-ts-scss.vkohut1807.smallhost.pl
+          server-dir: domains/animated-sections---laravel-ts-scss.vkohut1807.smallhost.pl/
           exclude: public/build/
           dry-run: false
