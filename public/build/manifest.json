@@ -1,0 +1,186 @@
+{
+  "public/images/section-13/1.webp": {
+    "file": "assets/1-Cp5Gd0Lu.webp",
+    "src": "public/images/section-13/1.webp"
+  },
+  "resources/scss/global/index.scss": {
+    "file": "assets/index-DVC01wT_.css",
+    "src": "resources/scss/global/index.scss",
+    "isEntry": true,
+    "name": "index",
+    "names": [
+      "index.css"
+    ]
+  },
+  "resources/scss/layouts/home.scss": {
+    "file": "assets/home-CKBplyh1.css",
+    "src": "resources/scss/layouts/home.scss",
+    "isEntry": true,
+    "name": "home",
+    "names": [
+      "home.css"
+    ]
+  },
+  "resources/scss/layouts/section-1.scss": {
+    "file": "assets/section-1-0pIPBTP2.css",
+    "src": "resources/scss/layouts/section-1.scss",
+    "isEntry": true,
+    "name": "section-1",
+    "names": [
+      "section-1.css"
+    ]
+  },
+  "resources/scss/layouts/section-10.scss": {
+    "file": "assets/section-10-BpebHKtg.css",
+    "src": "resources/scss/layouts/section-10.scss",
+    "isEntry": true,
+    "name": "section-10",
+    "names": [
+      "section-10.css"
+    ]
+  },
+  "resources/scss/layouts/section-11.scss": {
+    "file": "assets/section-11-kxkc9iQ8.css",
+    "src": "resources/scss/layouts/section-11.scss",
+    "isEntry": true,
+    "name": "section-11",
+    "names": [
+      "section-11.css"
+    ]
+  },
+  "resources/scss/layouts/section-12.scss": {
+    "file": "assets/section-12-CcoLG5Vp.css",
+    "src": "resources/scss/layouts/section-12.scss",
+    "isEntry": true,
+    "name": "section-12",
+    "names": [
+      "section-12.css"
+    ]
+  },
+  "resources/scss/layouts/section-13.scss": {
+    "file": "assets/section-13-DBWvPGR1.css",
+    "src": "resources/scss/layouts/section-13.scss",
+    "isEntry": true,
+    "name": "section-13",
+    "names": [
+      "section-13.css"
+    ]
+  },
+  "resources/scss/layouts/section-14.scss": {
+    "file": "assets/section-14-DliC6i1G.css",
+    "src": "resources/scss/layouts/section-14.scss",
+    "isEntry": true,
+    "name": "section-14",
+    "names": [
+      "section-14.css"
+    ]
+  },
+  "resources/scss/layouts/section-2.scss": {
+    "file": "assets/section-2-DJMCUvT7.css",
+    "src": "resources/scss/layouts/section-2.scss",
+    "isEntry": true,
+    "name": "section-2",
+    "names": [
+      "section-2.css"
+    ]
+  },
+  "resources/scss/layouts/section-3.scss": {
+    "file": "assets/section-3-EsuMDECk.css",
+    "src": "resources/scss/layouts/section-3.scss",
+    "isEntry": true,
+    "name": "section-3",
+    "names": [
+      "section-3.css"
+    ]
+  },
+  "resources/scss/layouts/section-4.scss": {
+    "file": "assets/section-4-HfrmIcIC.css",
+    "src": "resources/scss/layouts/section-4.scss",
+    "isEntry": true,
+    "name": "section-4",
+    "names": [
+      "section-4.css"
+    ]
+  },
+  "resources/scss/layouts/section-5.scss": {
+    "file": "assets/section-5-1r1XKwTk.css",
+    "src": "resources/scss/layouts/section-5.scss",
+    "isEntry": true,
+    "name": "section-5",
+    "names": [
+      "section-5.css"
+    ]
+  },
+  "resources/scss/layouts/section-6.scss": {
+    "file": "assets/section-6-9A72jirF.css",
+    "src": "resources/scss/layouts/section-6.scss",
+    "isEntry": true,
+    "name": "section-6",
+    "names": [
+      "section-6.css"
+    ]
+  },
+  "resources/scss/layouts/section-7.scss": {
+    "file": "assets/section-7-DdLG_b78.css",
+    "src": "resources/scss/layouts/section-7.scss",
+    "isEntry": true,
+    "name": "section-7",
+    "names": [
+      "section-7.css"
+    ]
+  },
+  "resources/scss/layouts/section-8.scss": {
+    "file": "assets/section-8-BYYu3wkY.css",
+    "src": "resources/scss/layouts/section-8.scss",
+    "isEntry": true,
+    "name": "section-8",
+    "names": [
+      "section-8.css"
+    ]
+  },
+  "resources/scss/layouts/section-9.scss": {
+    "file": "assets/section-9-B4oM4iz8.css",
+    "src": "resources/scss/layouts/section-9.scss",
+    "isEntry": true,
+    "name": "section-9",
+    "names": [
+      "section-9.css"
+    ]
+  },
+  "resources/ts/components/navigationDrawers.ts": {
+    "file": "assets/navigationDrawers-slWGM9-k.js",
+    "name": "navigationDrawers",
+    "src": "resources/ts/components/navigationDrawers.ts",
+    "isEntry": true
+  },
+  "resources/ts/layouts/section-11.ts": {
+    "file": "assets/section-11-48c1an1k.js",
+    "name": "section-11",
+    "src": "resources/ts/layouts/section-11.ts",
+    "isEntry": true
+  },
+  "resources/ts/layouts/section-2.ts": {
+    "file": "assets/section-2-BGHaNjv3.js",
+    "name": "section-2",
+    "src": "resources/ts/layouts/section-2.ts",
+    "isEntry": true
+  },
+  "resources/ts/layouts/section-7.ts": {
+    "file": "assets/section-7-C7HBsLEf.js",
+    "name": "section-7",
+    "src": "resources/ts/layouts/section-7.ts",
+    "isEntry": true
+  },
+  "resources/ts/layouts/section-8.ts": {
+    "file": "assets/section-8-BSjyU-YT.js",
+    "name": "section-8",
+    "src": "resources/ts/layouts/section-8.ts",
+    "isEntry": true
+  },
+  "resources/ts/partials/breadcrumbs.ts": {
+    "file": "assets/breadcrumbs-DjzWm-EC.js",
+    "name": "breadcrumbs",
+    "src": "resources/ts/partials/breadcrumbs.ts",
+    "isEntry": true
+  }
+}
