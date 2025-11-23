@@ -16,7 +16,7 @@
                 @foreach ($routesConfig as $key => $value)
                     <a href="{{ route($value['route-name']) }}" class="page-view">
                         <h5>{{ $value['view-name'] }}</h5>
-                        <img src="/images/sections-home/{{ $value['view-name'] }}.webp" alt="">
+                        {{-- <img src="/images/sections-home/{{ $value['view-name'] }}.webp" alt=""> --}}
                     </a>
                 @endforeach
             </section>
