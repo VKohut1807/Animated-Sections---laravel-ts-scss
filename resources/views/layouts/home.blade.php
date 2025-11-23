@@ -4,10 +4,6 @@
     @vite('resources/scss/layouts/home.scss')
 @endsection
 
-@section('script')
-    @vite('resources/tsx/home.tsx')
-@endsection
-
 @php
     $routesConfig = config('routes-config');
 @endphp
