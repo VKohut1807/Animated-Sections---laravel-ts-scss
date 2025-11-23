@@ -12,6 +12,7 @@
     $routesConfig = config('routes-config');
 @endphp
 
+
 @section('content')
     <div id="home-page" class="home-page">
         <div class="wrapper mt2">
