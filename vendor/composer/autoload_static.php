@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitb55739138aa09ebb7fb359d7edf4b96f
+class ComposerStaticInitdf6ba039687e8a669feb291792806e32
 {
     public static $files = array (
         '6e3fae29631ef280660b3cdad06f25a8' => __DIR__ . '/..' . '/symfony/deprecation-contracts/function.php',
@@ -680,6 +680,7 @@ class ComposerStaticInitb55739138aa09ebb7fb359d7edf4b96f
         'Cron\\MinutesField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/MinutesField.php',
         'Cron\\MonthField' => __DIR__ . '/..' . '/dragonmantank/cron-expression/src/Cron/MonthField.php',
         'Database\\Factories\\UserFactory' => __DIR__ . '/../..' . '/database/factories/UserFactory.php',
+        'Database\\Seeders\\DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeders/DatabaseSeeder.php',
         'DateError' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/DateError.php',
         'DateException' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/DateException.php',
         'DateInvalidOperationException' => __DIR__ . '/..' . '/symfony/polyfill-php83/Resources/stubs/DateInvalidOperationException.php',
@@ -6964,9 +6965,9 @@ class ComposerStaticInitb55739138aa09ebb7fb359d7edf4b96f
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitb55739138aa09ebb7fb359d7edf4b96f::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitb55739138aa09ebb7fb359d7edf4b96f::$prefixDirsPsr4;
-            $loader->classMap = ComposerStaticInitb55739138aa09ebb7fb359d7edf4b96f::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInitdf6ba039687e8a669feb291792806e32::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInitdf6ba039687e8a669feb291792806e32::$prefixDirsPsr4;
+            $loader->classMap = ComposerStaticInitdf6ba039687e8a669feb291792806e32::$classMap;
 
         }, null, ClassLoader::class);
     }
