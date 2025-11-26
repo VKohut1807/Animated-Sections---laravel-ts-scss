@@ -42,6 +42,7 @@
             visibility: visible;
             opacity: 0.8;
             z-index: -1;
+            cursor: pointer;
             transition:
                 opacity 0.3s ease-in-out,
                 visibility 0.3s ease-in-out,
@@ -51,7 +52,6 @@
                 display: block;
                 width: 1.5rem;
                 height: auto;
-                cursor: pointer;
                 transform: rotate(-90deg);
 
                 path {
