@@ -132,6 +132,7 @@
             flex-direction: row;
             align-items: center;
 
+            &.active,
             &:hover {
                 h5 {
                     text-decoration: underline;
