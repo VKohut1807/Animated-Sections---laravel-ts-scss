@@ -4,9 +4,9 @@
     </div>
     <div class="quick-view">
         @foreach ($routesConfig as $key => $value)
-            <a data-name="{{ $value['view-name'] }}" href="{{ route($value['route-name']) }}" class="page-view">
+            <div data-name="{{ $value['view-name'] }}" href="{{ route($value['route-name']) }}" class="page-view">
                 <h5>{{ $value['view-name'] }}</h5>
-            </a>
+            </div>
         @endforeach
     </div>
 </div>

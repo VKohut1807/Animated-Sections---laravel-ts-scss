@@ -4,7 +4,7 @@
     "src": "public/images/section-13/1.webp"
   },
   "resources/scss/global/index.scss": {
-    "file": "assets/index-CtmKafL6.css",
+    "file": "assets/index-CTDzl5ZM.css",
     "src": "resources/scss/global/index.scss",
     "isEntry": true,
     "name": "index",
@@ -148,7 +148,7 @@
     ]
   },
   "resources/ts/components/navigationDrawers.ts": {
-    "file": "assets/navigationDrawers-C2Z-8-lM.js",
+    "file": "assets/navigationDrawers-BGTTGZu_.js",
     "name": "navigationDrawers",
     "src": "resources/ts/components/navigationDrawers.ts",
     "isEntry": true

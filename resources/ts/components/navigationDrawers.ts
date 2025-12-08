@@ -5,7 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
         "[data-nav-drawers-views]",
         "[data-nav-drawers-views] [data-name]",
         "[data-nav-drawers-image]"
-    )
+    );
 });
 
 function showSectionsNr2(
@@ -15,31 +15,34 @@ function showSectionsNr2(
     sectionsSelector: string,
     imageSelector: string,
 ): void {
-    const backgroundWindow = document.querySelector<HTMLElement>(backgroundWindowSelector);
-    const triggerElement = document.querySelector<HTMLImageElement>(triggerElementSelector);
-    const navDrawersViews = document.querySelector<HTMLElement>(navDrawersViewsSelector);
-    const sections = document.querySelectorAll<HTMLElement>(sectionsSelector);
-    const image = document.querySelector<HTMLImageElement>(imageSelector);
+    const backgroundWindow = document.querySelector(backgroundWindowSelector) as HTMLElement;
+    const triggerElement = document.querySelector(triggerElementSelector) as HTMLElement;
+    const navDrawersViews = document.querySelector(navDrawersViewsSelector) as HTMLElement;
+    const sections = document.querySelectorAll(sectionsSelector) as NodeListOf<HTMLElement>;
+    const image = document.querySelector(imageSelector) as HTMLImageElement;
+
     let currentActive: HTMLElement | null = null;
+    let tappedElement: HTMLElement | null = null;
 
     function showImage(section: HTMLElement) {
-        const link = section.dataset.name as string;
+        const link = section.dataset.name;
         if (!image || !link) return;
 
         if (currentActive && currentActive !== section) {
             currentActive.classList.remove("active");
         }
 
-        section.classList.add("active");
         currentActive = section;
+        section.classList.add("active");
 
-        image.style.display = "block";
         image.src = `/images/sections-home/${link}.webp`;
+        image.style.display = "block";
         image.classList.add("active");
     }
 
     function hideImage() {
         if (!image) return;
+
         image.classList.remove("active");
 
         if (currentActive) {
@@ -49,26 +52,33 @@ function showSectionsNr2(
     }
 
     sections.forEach(section => {
-        let tapped = false;
+        section.addEventListener("mouseover", () => showImage(section));
+        section.addEventListener("mouseout", hideImage);
+
+        section.addEventListener("click", () => {
+            const href = section.getAttribute("href");
+            if (href) window.location.href = href;
+        });
 
         section.addEventListener("touchstart", (e) => {
-            if (!tapped) {
+            const href = section.getAttribute("href");
+
+            if (tappedElement !== section) {
                 e.preventDefault();
-                tapped = true;
+                tappedElement = section;
                 showImage(section);
 
-                setTimeout(() => tapped = false, 500);
+                setTimeout(() => {
+                    tappedElement = null;
+                }, 600);
+
             } else {
-                hideImage();
-                const link = section.getAttribute("href");
-                if (link) {
-                    window.location.href = link;
+                if (href) {
+                    hideImage();
+                    window.location.href = href;
                 }
             }
         });
-
-        section.addEventListener('mouseover', () => showImage(section));
-        section.addEventListener('mouseout', hideImage);
     });
 
     triggerElement?.addEventListener("click", () => {
