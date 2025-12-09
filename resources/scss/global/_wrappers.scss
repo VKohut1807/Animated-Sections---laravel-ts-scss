@@ -1,4 +1,4 @@
-@use "../config/mixins" as *;
+@use "../config/mixins-new" as *;
 
 .wrapper {
     width: 85%;
@@ -16,9 +16,5 @@
     &-50 {
         width: 50%;
         margin: 0 auto;
-
-        @include break("lg") {
-            width: 75%;
-        }
     }
 }

@@ -17,17 +17,17 @@
         grid-template-columns: repeat(4, 1fr);
         gap: 2rem;
 
-        @include break('lg') {
-            grid-template-columns: repeat(3, 1fr);
-        }
+        // @include break('lg') {
+        //     grid-template-columns: repeat(3, 1fr);
+        // }
 
-        @include break('md') {
-            grid-template-columns: repeat(2, 1fr);
-        }
+        // @include break('md') {
+        //     grid-template-columns: repeat(2, 1fr);
+        // }
 
-        @include break('sm') {
-            grid-template-columns: repeat(1, 1fr);
-        }
+        // @include break('sm') {
+        //     grid-template-columns: repeat(1, 1fr);
+        // }
 
         .page-view {
             position: relative;
