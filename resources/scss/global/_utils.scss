@@ -122,6 +122,7 @@
         padding: 5rem 0.75rem 2rem;
         display: flex;
         flex-direction: column;
+        row-gap: 0.25rem;
         height: 100%;
 
         .page-view {
@@ -186,7 +187,7 @@
     left: 0.25%;
     transform: translate(0, -50%);
     background-color: #fff;
-    width: 55%;
+    width: calc(100% - 10.5rem);
     height: 20%;
     box-shadow: 0.25rem 0.5rem 2rem $primary;
     border-radius: 2rem;
@@ -200,30 +201,25 @@
         opacity 0.3s ease-in-out,
         visibility 0.3s ease-in-out;
 
-    @include break('xxs') {
-        width: 58%;
-    }
-
     @include break('s') {
-        width: 70%;
         height: 30%;
     }
 
     @include break('md') {
-        width: 80%;
         height: 50%;
     }
 
     @include break('lg') {
         transform: translate(-50%, -50%);
+        top: 45%;
         left: 45%;
         width: 60%;
-        height: 50%;
+        height: 60%;
     }
 
     @include break('2xl') {
         width: 70%;
-        height: 60%;
+        height: 65%;
     }
 
     &.active {
