@@ -1,0 +1,122 @@
+@use "@/scss/config" as *;
+
+.section-15 {
+    $GLOBALWRAPPER: 85%;
+    $columnGap: 0.75rem;
+    $height: 2.5rem;
+
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    align-items: unset;
+    height: calc($height * 2);
+    width: 100%;
+    position: relative;
+    margin-top: 3rem;
+
+    @include break("md") {
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    .before-elements,
+    .after-elements {
+        display: block;
+        position: absolute;
+        top: 0;
+        height: 100%;
+        min-width: 7.5%;
+        z-index: 2;
+        backdrop-filter: blur(0.0625rem);
+
+        @include break("md") {
+            display: none;
+        }
+    }
+
+    .before-elements {
+        left: 0;
+        background: linear-gradient(to right, #fff, rgba(255, 255, 255, 0));
+    }
+
+    .after-elements {
+        right: 0;
+        background: linear-gradient(to right, rgba(255, 255, 255, 0), #fff);
+    }
+
+    .section-15-elements {
+        display: flex;
+        column-gap: $columnGap;
+        overflow: auto hidden;
+        flex-direction: row;
+        align-items: center;
+        height: calc($height * 2);
+        padding: 0 calc((100% - $GLOBALWRAPPER) / 2) $height;
+
+        .home-wrapper {
+            a {
+                display: block;
+            }
+
+            .home-icon {
+                height: 1.25rem;
+                width: auto;
+                cursor: pointer;
+
+                path {
+                    fill: $primary_80;
+                    transition: fill 0.3s ease-in-out;
+                }
+
+                &:hover {
+                    path {
+                        fill: $primary_60;
+                    }
+                }
+            }
+        }
+
+        .elements-wrapper {
+            display: flex;
+            align-items: center;
+            flex-wrap: nowrap;
+            padding: 0;
+            margin: 0;
+            column-gap: $columnGap;
+            row-gap: 0.5rem;
+            padding-right: 5%;
+
+            .section-15-element {
+                display: flex;
+                align-items: center;
+                column-gap: $columnGap;
+                text-wrap: nowrap;
+
+                svg {
+                    path {
+                        fill: $third_60;
+                    }
+                }
+
+                a {
+                    white-space: nowrap;
+                    text-wrap: nowrap;
+                    color: $third_60;
+                    font-size: 1rem;
+                    transition: color 0.3s ease-in-out;
+                    cursor: pointer;
+
+                    &:hover {
+                        color: $secondary;
+                    }
+                }
+
+                .active {
+                    color: $secondary;
+                    font-size: 1rem;
+                    font-weight: 600;
+                }
+            }
+        }
+    }
+}

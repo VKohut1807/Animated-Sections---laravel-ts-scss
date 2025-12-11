@@ -248,3 +248,17 @@
         background-color: transparent;
     }
 }
+
+[data-scroll-area] {
+
+    &:not([data-variant]),
+    &[data-variant="primary"] {
+        height: 10rem;
+        background-color: $primary_30;
+    }
+
+    &[data-variant="secondary"] {
+        height: 40rem;
+        background-color: $secondary_30;
+    }
+}
