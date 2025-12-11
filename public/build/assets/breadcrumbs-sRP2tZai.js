@@ -1,0 +1,1 @@
+window.addEventListener("DOMContentLoaded",()=>{d()});window.addEventListener("resize",()=>{d()});function d(){const e=document.querySelector("[data-breadcrumbs-elem]");e&&window.innerWidth<=768&&(e.scrollLeft=e.scrollWidth)}

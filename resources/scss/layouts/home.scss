@@ -13,23 +13,13 @@
     }
 
     .home-section {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
+        display: flex;
+        justify-content: center;
         gap: 2rem;
-
-        // @include break('lg') {
-        //     grid-template-columns: repeat(3, 1fr);
-        // }
-
-        // @include break('md') {
-        //     grid-template-columns: repeat(2, 1fr);
-        // }
-
-        // @include break('sm') {
-        //     grid-template-columns: repeat(1, 1fr);
-        // }
+        flex-wrap: wrap;
 
         .page-view {
+            min-width: 19rem;
             position: relative;
             aspect-ratio: 16/9;
             display: flex;
