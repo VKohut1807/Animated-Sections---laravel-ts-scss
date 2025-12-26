@@ -9,9 +9,10 @@
         margin-bottom: 4rem;
         transition: gap 0.3s ease-in-out;
 
-        @include break('md') {
+        @include break('sm') {
             display: flex;
             flex-direction: row;
+            gap: 2rem;
         }
 
         h3 {
@@ -63,7 +64,7 @@
                     opacity 0.3s ease-in-out,
                     width 0.3s ease-in-out;
 
-                @include break('md') {
+                @include break('sm') {
                     top: -0.35rem;
                 }
             }
