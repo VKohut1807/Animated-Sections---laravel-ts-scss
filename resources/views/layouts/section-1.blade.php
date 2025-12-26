@@ -6,15 +6,34 @@
 
 @section('content')
     @php
-        $jsonFilePath = public_path('dataJson/sections/section-1.json');
-        $jsonContent = file_exists($jsonFilePath) ? file_get_contents($jsonFilePath) : '{}';
-        $dataJson1 = json_decode($jsonContent, true);
+        $dataJson1 = [
+            [
+                'number' => 1,
+                'name' => 'Your Apply',
+                'descr' => "English Learning looking for random paragraphs, you've come to the right place.",
+            ],
+            [
+                'number' => 2,
+                'name' => 'We Connect',
+                'descr' => "Javascript Learning looking for random paragraphs, you've come to the right place.",
+            ],
+            [
+                'number' => 3,
+                'name' => 'You Get Ready',
+                'descr' => "Angular Learning looking for random paragraphs, you've come to the right place.",
+            ],
+            [
+                'number' => 4,
+                'name' => 'Completed',
+                'descr' => "Php Learning looking for random paragraphs, you've come to the right place.",
+            ],
+        ];
     @endphp
 
     {{ Breadcrumbs::render() }}
 
     <section class="section-1">
-        <div class="wrapper mt2">
+        <div class="wrapper">
             <div class="section-up">
                 <h3>How to Apply</h3>
                 <a href="#" class="right">
