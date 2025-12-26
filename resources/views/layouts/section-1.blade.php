@@ -14,7 +14,7 @@
     {{ Breadcrumbs::render() }}
 
     <section class="section-1">
-        <div class="wrapper">
+        <div class="wrapper mt2">
             <div class="section-up">
                 <h3>How to Apply</h3>
                 <a href="#" class="right">
