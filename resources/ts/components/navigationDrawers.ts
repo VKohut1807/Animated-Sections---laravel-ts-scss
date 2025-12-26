@@ -1,5 +1,5 @@
 document.addEventListener("DOMContentLoaded", () => {
-    showSectionsNr2(
+    navDrawers(
         "[data-background-window]",
         "[data-nav-drawers-views] [data-trigger]",
         "[data-nav-drawers-views]",
@@ -8,7 +8,7 @@ document.addEventListener("DOMContentLoaded", () => {
     );
 });
 
-function showSectionsNr2(
+function navDrawers(
     backgroundWindowSelector: string,
     triggerElementSelector: string,
     navDrawersViewsSelector: string,
@@ -21,50 +21,92 @@ function showSectionsNr2(
     const sections = document.querySelectorAll(sectionsSelector) as NodeListOf<HTMLElement>;
     const image = document.querySelector(imageSelector) as HTMLImageElement;
 
-    let currentActive: HTMLElement | null = null;
+    const state = {
+        currentActive: null as HTMLElement | null,
+        scrollY: 0 as number
+    };
 
-    function showImage(section: HTMLElement) {
-        const link = section.dataset.sectionName;
-        if (!image || !link) return;
-
-
-        if (currentActive && currentActive !== section) {
-            currentActive.classList.remove("active");
-        }
-
-        currentActive = section;
-        section.classList.add("active");
-
-        image.src = `/images/sections-home/${link}.webp`;
-        image.style.display = "block";
-        image.classList.add("active");
-    }
-
-    function hideImage() {
-        if (!image || !currentActive) return;
-
-        image.classList.remove("active");
-        currentActive.classList.remove("active");
-        currentActive = null;
-    }
-
-    sections.forEach(section => {
-        section.addEventListener('touchstart', () => showImage(section));
-        section.addEventListener('touchend', hideImage);
-        section.addEventListener('touchcancel', hideImage);
-
-        section.addEventListener('mouseover', () => showImage(section));
-        section.addEventListener('mouseout', hideImage);
-    });
+    bindSectionEventsNavDrawers(sections, image, state);
 
     triggerElement?.addEventListener("click", () => {
+        disableScrollNavDrawers(state);
         navDrawersViews?.classList.add("active");
         backgroundWindow?.classList.add("active");
     });
 
     backgroundWindow?.addEventListener("click", () => {
-        hideImage();
+        hideImageNavDrawers(image, state);
+        enableScrollNavDrawers(state);
         navDrawersViews?.classList.remove("active");
         backgroundWindow?.classList.remove("active");
     });
+}
+
+function showImageNavDrawers(
+    section: HTMLElement,
+    image: HTMLImageElement | null,
+    state: { currentActive: HTMLElement | null }
+) {
+    const link = section.dataset.sectionName;
+    if (!image || !link) return;
+
+    if (state.currentActive && state.currentActive !== section) {
+        state.currentActive.classList.remove("active");
+    }
+
+    state.currentActive = section;
+    section.classList.add("active");
+
+    image.src = `/images/sections-home/${link}.webp`;
+    image.style.display = "block";
+    image.classList.add("active");
+}
+
+function hideImageNavDrawers(
+    image: HTMLImageElement | null,
+    state: { currentActive: HTMLElement | null }
+) {
+    if (!image || !state.currentActive) return;
+
+    image.classList.remove("active");
+    state.currentActive.classList.remove("active");
+    state.currentActive = null;
+}
+
+function bindSectionEventsNavDrawers(
+    sections: NodeListOf<HTMLElement>,
+    image: HTMLImageElement | null,
+    state: { currentActive: HTMLElement | null }
+) {
+    sections.forEach(section => {
+        section.addEventListener("touchstart", () =>
+            showImageNavDrawers(section, image, state)
+        );
+        section.addEventListener("touchend", () =>
+            hideImageNavDrawers(image, state)
+        );
+        section.addEventListener("touchcancel", () =>
+            hideImageNavDrawers(image, state)
+        );
+
+        section.addEventListener("mouseover", () =>
+            showImageNavDrawers(section, image, state)
+        );
+        section.addEventListener("mouseout", () =>
+            hideImageNavDrawers(image, state)
+        );
+    });
+}
+
+function disableScrollNavDrawers(state: { scrollY: number }) {
+    state.scrollY = window.scrollY;
+    document.body.style.position = 'fixed';
+    document.body.style.top = `-${scrollY}px`;
+    document.body.style.width = '100%';
+}
+
+function enableScrollNavDrawers(state: { scrollY: number }) {
+    document.body.style.position = '';
+    document.body.style.top = '';
+    window.scrollTo(0, state.scrollY);
 }

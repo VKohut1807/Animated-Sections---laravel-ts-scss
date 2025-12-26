@@ -4,7 +4,7 @@
     "src": "public/images/section-13/1.webp"
   },
   "resources/scss/global/index.scss": {
-    "file": "assets/index-Dxk5cX5e.css",
+    "file": "assets/index-7NHLsAPu.css",
     "src": "resources/scss/global/index.scss",
     "isEntry": true,
     "name": "index",
@@ -75,8 +75,17 @@
       "section-14.css"
     ]
   },
+  "resources/scss/layouts/section-15.scss": {
+    "file": "assets/section-15-BngzikAs.css",
+    "src": "resources/scss/layouts/section-15.scss",
+    "isEntry": true,
+    "name": "section-15",
+    "names": [
+      "section-15.css"
+    ]
+  },
   "resources/scss/layouts/section-2.scss": {
-    "file": "assets/section-2-B-MUh_ad.css",
+    "file": "assets/section-2-lGHFfHZk.css",
     "src": "resources/scss/layouts/section-2.scss",
     "isEntry": true,
     "name": "section-2",
@@ -148,7 +157,7 @@
     ]
   },
   "resources/ts/components/navigationDrawers.ts": {
-    "file": "assets/navigationDrawers-Dd4jFH_m.js",
+    "file": "assets/navigationDrawers-Co3vmr3m.js",
     "name": "navigationDrawers",
     "src": "resources/ts/components/navigationDrawers.ts",
     "isEntry": true
@@ -159,8 +168,14 @@
     "src": "resources/ts/layouts/section-11.ts",
     "isEntry": true
   },
+  "resources/ts/layouts/section-15.ts": {
+    "file": "assets/section-15-48c1an1k.js",
+    "name": "section-15",
+    "src": "resources/ts/layouts/section-15.ts",
+    "isEntry": true
+  },
   "resources/ts/layouts/section-2.ts": {
-    "file": "assets/section-2-BGHaNjv3.js",
+    "file": "assets/section-2-CdwH_60q.js",
     "name": "section-2",
     "src": "resources/ts/layouts/section-2.ts",
     "isEntry": true

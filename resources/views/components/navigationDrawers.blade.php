@@ -1,4 +1,8 @@
-<div data-nav-drawers-views class="sections">
+@php
+    $routesConfig = config('routes-config');
+@endphp
+
+<section data-nav-drawers-views class="sections">
     <div class="hook-open" data-trigger>
         @svgPublic('/svg/section-2/open.svg')
     </div>
@@ -12,7 +16,7 @@
             </div>
         @endforeach
     </div>
-</div>
+</section>
 
 <div data-background-window></div>
 

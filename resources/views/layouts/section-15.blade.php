@@ -39,7 +39,7 @@
         // install 'diglactic/laravel-breadcrumbs'
         // create file 'config->breadcrumbs.php'
         // create file 'routes->breadcrumbs.php'
-        // use '{{ Breadcrumbs::render() }}'' in your view component
+        // use '{{ Breadcrumbs::render() }}' in your view component
     @endphp
 
     <section class="section-15">

@@ -15,21 +15,23 @@
 
     {{ Breadcrumbs::render() }}
 
-    <section id="section-2" class="section-2">
-        <div class="sections">
-            <div class="hook-open">
-                @svgPublic('/svg/section-2/open.svg')
-            </div>
-            <div data-section2-names class="quick-view">
-                @foreach ($routesConfig as $key => $value)
-                    <a data-section2-view-name="{{ $value['view-name'] }}" href="{{ route($value['route-name']) }}"
-                        class="page-view">
-                        <h5>{{ $value['view-name'] }}</h5>
-                    </a>
-                @endforeach
-            </div>
+    <section data-section-2-views class="sections">
+        <div class="hook-open" data-trigger>
+            @svgPublic('/svg/section-2/open.svg')
         </div>
-
-        <img data-section2-view id="view-section" class="view-section" src="" alt="">
+        <div class="quick-view">
+            @foreach ($routesConfig as $key => $value)
+                <div data-section-name="{{ $value['view-name'] }}" class="page-view">
+                    <h5>{{ $value['view-name'] }}</h5>
+                    <a href="{{ route($value['route-name']) }}" class="page-link">
+                        @svgPublic('/svg/section-2/arrow-right-icon.svg')
+                    </a>
+                </div>
+            @endforeach
+        </div>
     </section>
+
+    <div data-background-window></div>
+
+    <img data-section-2-image src="" alt="">
 @endsection

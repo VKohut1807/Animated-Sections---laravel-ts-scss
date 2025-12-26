@@ -19,6 +19,7 @@ const filesStyle = [
   './resources/scss/layouts/section-12.scss',
   './resources/scss/layouts/section-13.scss',
   './resources/scss/layouts/section-14.scss',
+  './resources/scss/layouts/section-15.scss',
 ];
 const filesTs = [
   './resources/ts/components/navigationDrawers.ts',
@@ -27,6 +28,7 @@ const filesTs = [
   './resources/ts/layouts/section-7.ts',
   './resources/ts/layouts/section-8.ts',
   './resources/ts/layouts/section-11.ts',
+  './resources/ts/layouts/section-15.ts',
 ];
 
 export default defineConfig({

@@ -20,15 +20,10 @@
     @yield('script')
 </head>
 
-
 <body>
     @vite('resources/ts/partials/breadcrumbs.ts')
 
     @if (!request()->is('section-2'))
-        @php
-            $routesConfig = config('routes-config');
-        @endphp
-
         @include('components.navigationDrawers')
         @vite('resources/ts/components/navigationDrawers.ts')
     @endif

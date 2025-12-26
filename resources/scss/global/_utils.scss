@@ -63,7 +63,7 @@
     right: -0;
     transform: translate(100%, -50%);
     height: 100%;
-    min-width: 10rem;
+    min-width: 11rem;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -114,16 +114,16 @@
     }
 
     .quick-view {
-        width: fit-content;
-        border-left: 0.25rem solid $primary_60;
-        border-radius: 0.5rem 0 0 0.5rem;
-        height: fit-content;
-        background-color: #fff;
-        padding: 5rem 0.75rem 2rem;
         display: flex;
         flex-direction: column;
+        align-items: center;
         row-gap: 0.25rem;
+        width: 100%;
         height: 100%;
+        overflow: hidden auto;
+        border-left: 0.25rem solid $primary_60;
+        border-radius: 0.5rem 0 0 0.5rem;
+        background-color: #fff;
 
         .page-view {
             width: 100%;
@@ -131,6 +131,14 @@
             flex-direction: row;
             align-items: center;
             gap: 1rem;
+
+            &:first-child {
+                margin-top: 1rem;
+            }
+
+            &:last-child {
+                margin-bottom: 1rem;
+            }
 
             &.active,
             &:hover {
@@ -148,6 +156,7 @@
             }
 
             h5 {
+                margin-left: 1rem;
                 user-select: none;
                 width: fit-content;
                 font-size: 1rem;
@@ -184,10 +193,10 @@
 [data-nav-drawers-image] {
     position: fixed;
     top: 35%;
-    left: 0.25%;
+    left: 1%;
     transform: translate(0, -50%);
     background-color: #fff;
-    width: calc(100% - 10.5rem);
+    width: calc(100% - 11rem);
     height: 20%;
     box-shadow: 0.25rem 0.5rem 2rem $primary;
     border-radius: 2rem;
