@@ -4,7 +4,7 @@
     "src": "public/images/section-13/1.webp"
   },
   "resources/scss/global/index.scss": {
-    "file": "assets/index-7NHLsAPu.css",
+    "file": "assets/index-CgimYGiO.css",
     "src": "resources/scss/global/index.scss",
     "isEntry": true,
     "name": "index",
@@ -85,7 +85,7 @@
     ]
   },
   "resources/scss/layouts/section-2.scss": {
-    "file": "assets/section-2-lGHFfHZk.css",
+    "file": "assets/section-2-DNiFjKLf.css",
     "src": "resources/scss/layouts/section-2.scss",
     "isEntry": true,
     "name": "section-2",
